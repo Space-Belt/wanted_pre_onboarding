@@ -34,13 +34,14 @@ function Modal() {
 
 const Container = styled.div`
   position: relative;
+  max-width: 100vw;
   margin-bottom: 80px;
 `;
 
 const Subtitle = styled.div`
   width: 15%;
   height: 8%;
-  font-size: 40px;
+  font-size: 1.5rem;
   font-weight: 700;
   padding: 20px;
 `;
