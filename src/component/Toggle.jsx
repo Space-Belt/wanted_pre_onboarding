@@ -13,7 +13,7 @@ function Toggle() {
         <div>
           <OnOff id="toggleBtn" type="checkbox" onClick={textChange} />
           <Label htmlFor="toggleBtn"></Label>
-          <TextBox>Toggle Switch {checked ? "OFF" : "ON"}</TextBox>
+          <TextBox>Toggle Switch {checked ? "ON" : "OFF"}</TextBox>
         </div>
       </ToggleContainer>
     </Container>
@@ -21,7 +21,7 @@ function Toggle() {
 }
 
 const Container = styled.div`
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 `;
 
 const Subtitle = styled.div`
@@ -35,10 +35,6 @@ const Subtitle = styled.div`
 const ToggleContainer = styled.div`
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  width: 100%;
-  height: 100%;
-
   & > div > input + label::before {
     content: "";
     position: absolute;
@@ -81,6 +77,7 @@ const OnOff = styled.input`
 `;
 
 const Label = styled.label`
+  cursor: pointer;
   display: block;
   position: relative;
   width: 200px;
