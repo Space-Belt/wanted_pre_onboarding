@@ -22,12 +22,14 @@ function Toggle() {
 
 const Container = styled.div`
   margin-bottom: 50px;
+  width: 100vw;
+  max-width: 100vw;
 `;
 
 const Subtitle = styled.div`
   width: 15%;
   height: 8%;
-  font-size: 40px;
+  font-size: 1.5rem;
   font-weight: 700;
   padding: 20px;
 `;
