@@ -4,6 +4,12 @@
 
 [https://preonboard-spacebelt.netlify.app/](https://preonboard-spacebelt.netlify.app/)
 
+### 실행 방법
+
+``` bash
+npm start
+```
+
 ---
 
 ## 1. Toggle
