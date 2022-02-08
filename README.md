@@ -1,3 +1,11 @@
+# 원티드 프리온보딩
+
+### 배포 주소
+
+[https://preonboard-spacebelt.netlify.app/](https://preonboard-spacebelt.netlify.app/)
+
+---
+
 ## 1. Toggle
 
 ![toggle](https://user-images.githubusercontent.com/82592845/153044360-8a71fdda-fc02-4737-8cab-6b34d81197eb.gif)
@@ -94,3 +102,5 @@
 1. 컴포넌트를 분리하는데 시간이 꽤 오래걸렸었다.
 2. ref를 이용해 focus를 거는 과정에서 헤맸다.
    - 컴포넌트화 하고 Ref를 사용하는 과정, useEffect를 이용하여 inputRef.current.focus() 를 하는 과정에서 난항을 겪었다.
+
+---
