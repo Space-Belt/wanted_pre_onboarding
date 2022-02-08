@@ -44,7 +44,7 @@ const Container = styled.div`
 
 const BorderBox = styled.div`
   width: 80rem;
-  border: 1px solid #eaeaea;
+  border: 3px solid #eaeaea;
   border-radius: 10px;
 `;
 const TopBox = styled.div`

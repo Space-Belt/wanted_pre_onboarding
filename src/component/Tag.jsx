@@ -62,7 +62,7 @@ const Container = styled.div`
 const TagBox = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid #eaeaea;
+  border: 3px solid #eaeaea;
   border-radius: 10px;
   width: 80rem;
   height: 15rem;

@@ -33,7 +33,7 @@ const Container = styled.div`
 const BorderBox = styled.div`
   width: 80rem;
   height: 15rem;
-  border: 2px solid #eaeaea;
+  border: 3px solid #eaeaea;
   border-radius: 10px;
 `;
 

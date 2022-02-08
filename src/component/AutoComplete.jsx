@@ -62,7 +62,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 80px;
   height: 30rem;
 `;
 
@@ -70,7 +69,7 @@ const AutoCompleteBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #eaeaea;
+  border: 3px solid #eaeaea;
   border-radius: 10px;
   width: 80rem;
   height: 25rem;
