@@ -11,13 +11,14 @@ function Tag() {
     const newId = tags.length === 0 ? 0 : tags[tags.length - 1]["id"] + 1;
     const newTags = [...tags, { id: newId, text: e.target[0].value }];
     setTags(newTags);
+    console.log(inputRef.current.value);
     inputRef.current.value = "";
   };
+
   const handleClear = (index) => {
     const filteredTags = tags.filter((el) => el.id !== index);
     setTags(filteredTags);
   };
-  console.log(tags);
   return (
     <Container>
       <TagBox>
@@ -28,7 +29,7 @@ function Tag() {
             onSubmit={(e) => handleSubmit(e)}
           >
             {tags.map((el, i) => (
-              <TagContent>
+              <TagContent key={i}>
                 <span>{el.text}</span>
                 <AiFillCloseCircle
                   style={{ fontSize: "18", cursor: "pointer" }}
@@ -55,17 +56,18 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 80px;
-  height: 30rem;
+  /* height: 25rem; */
 `;
+
 const TagBox = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   width: 80rem;
-  height: 25rem;
+  height: 15rem;
 `;
+
 const Subtitle = styled.div`
   width: 5%;
   height: 8%;
@@ -85,7 +87,6 @@ const BottomBox = styled.div`
 const Form = styled.form`
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 35rem;
   height: 3rem;
   padding: 1em 2em;
@@ -111,8 +112,7 @@ const TagContent = styled.div`
 `;
 
 const Input = styled.input`
-  /* flex: 1; */
-  flex-basis: 15%;
+  flex-basis: 50%;
   height: 2.5rem;
   border: none;
   outline: none;

@@ -14,33 +14,41 @@ function Tab() {
   const tabText = navBars[clickedNav]["text"];
   return (
     <Container>
-      <TopBox>
-        <Subtitle>Tab</Subtitle>
-        <Nav>
-          {navBars.map((navs, index) => (
-            <List
-              className={clickedNav === index ? "active" : ""}
-              key={index}
-              onClick={() => handleClick(index)}
-            >
-              {navs.nav}
-            </List>
-          ))}
-        </Nav>
-      </TopBox>
-      <BottomBox>{tabText}</BottomBox>
+      <BorderBox>
+        <TopBox>
+          <Subtitle>Tab</Subtitle>
+          <Nav>
+            {navBars.map((navs, index) => (
+              <List
+                className={clickedNav === index ? "active" : ""}
+                key={index}
+                onClick={() => handleClick(index)}
+              >
+                {navs.nav}
+              </List>
+            ))}
+          </Nav>
+        </TopBox>
+        <BottomBox>{tabText}</BottomBox>
+      </BorderBox>
     </Container>
   );
 }
 
 const Container = styled.div`
-  position: relative;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  width: 100vw;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
+`;
+
+const BorderBox = styled.div`
+  width: 80rem;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
 `;
 const TopBox = styled.div`
+  width: 80rem;
   display: flex;
   align-items: center;
 `;
@@ -53,13 +61,12 @@ const Subtitle = styled.div`
 `;
 
 const Nav = styled.div`
-  width: 80%;
+  width: 100%;
   height: 50px;
   margin-top: 34px;
   display: flex;
   flex-direction: row;
   background-color: #e0e0e0;
-  /* border: 1px solid silver; */
   & :nth-child(1) {
     margin-left: 7%;
   }

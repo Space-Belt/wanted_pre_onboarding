@@ -8,30 +8,41 @@ function Toggle() {
   };
   return (
     <Container>
-      <Subtitle>Toggle</Subtitle>
-      <ToggleContainer>
-        <div>
-          <OnOff id="toggleBtn" type="checkbox" onClick={textChange} />
-          <Label htmlFor="toggleBtn"></Label>
-          <TextBox>Toggle Switch {checked ? "ON" : "OFF"}</TextBox>
-        </div>
-      </ToggleContainer>
+      <BorderBox>
+        <Subtitle>Toggle</Subtitle>
+        <ToggleContainer>
+          <div>
+            <OnOff id="toggleBtn" type="checkbox" onClick={textChange} />
+            <Label htmlFor="toggleBtn"></Label>
+            <TextBox>Toggle Switch {checked ? "ON" : "OFF"}</TextBox>
+          </div>
+        </ToggleContainer>
+      </BorderBox>
     </Container>
   );
 }
 
 const Container = styled.div`
-  margin-bottom: 50px;
-  width: 100vw;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
   max-width: 100vw;
 `;
 
+const BorderBox = styled.div`
+  width: 80rem;
+  height: 15rem;
+  border: 2px solid #eaeaea;
+  border-radius: 10px;
+`;
+
 const Subtitle = styled.div`
-  width: 15%;
-  height: 8%;
+  width: 100%;
+  height: 15%;
   font-size: 1.5rem;
   font-weight: 700;
-  padding: 20px;
+  padding: 15px;
 `;
 
 const ToggleContainer = styled.div`

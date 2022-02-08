@@ -23,23 +23,35 @@ function Modal() {
 
   return (
     <Container>
-      <Subtitle>Modal</Subtitle>
-      <ModalBtnBox>
-        <ModalBtn onClick={handleClick}>Open Modal</ModalBtn>
-      </ModalBtnBox>
-      {modalSwitch ? ModalView({ handleClick }) : <></>}
+      <BorderBox>
+        <Subtitle>Modal</Subtitle>
+        <ModalBtnBox>
+          <ModalBtn onClick={handleClick}>Open Modal</ModalBtn>
+        </ModalBtnBox>
+        {modalSwitch ? ModalView({ handleClick }) : <></>}
+      </BorderBox>
     </Container>
   );
 }
 
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
   position: relative;
   max-width: 100vw;
-  margin-bottom: 80px;
+  height: 15rem;
+  margin-bottom: 30px;
+`;
+
+const BorderBox = styled.div`
+  width: 80rem;
+  height: 15rem;
+  border: 2px solid #eaeaea;
+  border-radius: 10px;
 `;
 
 const Subtitle = styled.div`
-  width: 15%;
+  width: 100%;
   height: 8%;
   font-size: 1.5rem;
   font-weight: 700;
@@ -48,18 +60,18 @@ const Subtitle = styled.div`
 
 const ModalBox = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 350px;
+  top: 2px;
+  left: 11.4vw;
+  border-radius: 10px;
+  width: 76.4vw;
+  height: 15rem;
   background-color: rgba(173, 173, 173, 0.7);
 `;
 
 const ModalElement = styled.div`
-  padding: 5px;
   width: 50%;
-  height: 50%;
-  margin: 5% auto;
+  height: 60%;
+  margin: 3% auto;
   border: none;
   border-radius: 25px;
   background-color: #ffffff;
